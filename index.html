@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Music Player</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-primary">
+    <!-- Navbar -->
+    <div class="position-relative">
+      <div class="position-music music-bar w-100">
+        <div class="container ">
+          <div class="row my-2">
+            <div class="col-3 d-none d-sm-block">
+              <div class="d-flex align-items-center">
+                <img
+                  width="60"
+                  height="60"
+                  src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+                />
+                <div class="d-flex flex-column justify-content-center ms-3">
+                  <h5 class="card-title mb-0 fw-bold">
+                    ColdPlay
+                    <i class="fa-regular fa-heart ms-2 text-muted"></i>
+                    <i class="fa-solid fa-ban ms-2 text-muted"></i>
+                  </h5>
+                  <p class="text-muted mb-0">851 Followers</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-12 d-flex justify-content-center">
+              <div class="d-flex w-100 flex-column justify-content-between">
+                <div class="play-icons d-flex align-items-center justify-content-center">
+                  <i class="fas fa-random"></i>
+                  <i class="fas fa-step-backward"></i>
+                  <i class="far fa-pause-circle pause-icon"></i>
+                  <i class="fas fa-step-forward"></i>
+                  <i class="fas fa-redo-alt"></i>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span class="me-3 text-muted">1:39</span>
+                  <span class="song-adjustor w-100">
+                    <i class="fas fa-circle song-button"></i>
+                  </span>
+                  <span class="ms-4 text-muted">4:44</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 d-none d-sm-flex justify-content-center align-items-center">
+              <i class="fa-solid fa-list-check"></i>
+              <i class="fas fa-tv ms-3"></i>
+              <i class="fas fa-volume-up ms-3"></i>
+              <span class="volume-adjustor">
+                <i class="fas fa-circle volume-button"></i>
+              </span>
+              <i class="fas fa-expand-alt ms-3"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar shadow-none navbar-expand-lg navbar-light">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img src="img/logo.png" height="60" alt="MDB Logo" loading="lazy" />
+            <div class="d-flex flex-column">
+              <span>Ninja</span>
+              <span class="studio">Studio</span>
+            </div>
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Favorites</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+          <form class="input-group w-auto d-none d-sm-flex">
+            <span class="input-group-text border-0 bg-secondary text-white"
+              ><i class="fas fa-search"></i
+            ></span>
+            <input
+              type="text"
+              class="form-control bg-secondary border-0"
+              aria-label="Amount (to the nearest dollar)"
+            />
+            <span class="input-group-text border-0 bg-secondary text-white"
+              ><i class="fas fa-microphone"></i
+            ></span>
+          </form>
+          <!-- Notifications -->
+          <div class="dropdown w-25 text-center">
+            <a
+              class="text-reset me-3 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-danger"
+                >1</span
+              >
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">Some news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Avatar -->
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuAvatar"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                class="rounded-circle"
+                height="50"
+                alt="Black and White Portrait of a Man"
+                loading="lazy"
+              />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuAvatar"
+            >
+              <li>
+                <a class="dropdown-item" href="#">My profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right elements -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col-12 col-sm-9">
+          <div class="card rounded-0 w-100">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="img/banner.png" class="img-fluid" alt="..." />
+              </div>
+              <div class="col-md-8 bg-secondary">
+                <div class="card-body mt-4">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title fw-bold">ColdPlay</h5>
+                    <p class="text-muted">851 Followers</p>
+                  </div>
+                  <h6 class="card-subtitle text-muted">British Band</h6>
+                  <p class="card-text text-muted mt-2">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <button
+                    class="play-all-button btn w-35 rounded-0 btn-lg color-btn text-white"
+                  >
+                    Play All
+                  </button>
+                  <a class="btn btn-lg text-white shadow-0">Follow</a>
+                  <p class="card-text track-text mt-2">
+                    247 Tracks | 128 Albums
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="musics">
+            <div class="w-100 mt-3 bg-secondary d-flex align-items-center p-2">
+              <span class="ms-3 song-number text-muted">01</span>
+              <img class="ms-3 rounded shadow song-img" src="img/girl3.jpg" />
+              <p class="mb-0 ms-3 track-text song-text">
+                Imagine Dragons
+                <span class="text-muted d-block">Pep Brand</span>
+              </p>
+              <p class="flex-grow text-muted w-100 text-center">4:44</p>
+              <span class="icon text-center"
+                ><i class="fa-regular fa-heart"></i
+              ></span>
+              <span class="icon text-center"
+                ><i class="fa-solid fa-plus"></i
+              ></span>
+            </div>
+            <div class="w-100 mt-3 bg-secondary d-flex align-items-center p-2">
+              <span class="ms-3 song-number text-muted">
+                <i class="fa-solid fa-play text-primary"></i>
+              </span>
+              <img class="ms-3 rounded shadow song-img" src="img/girl2.jpg" />
+              <p class="mb-0 ms-3 track-text song-text">
+                Wory Bout Us
+                <span class="text-muted d-block">Pep Brand</span>
+              </p>
+              <p class="flex-grow text-muted w-100 text-center"></p>
+              <span class="icon text-center"
+                ><i class="fa-regular fa-heart"></i
+              ></span>
+              <span class="icon text-center"
+                ><i class="fa-solid fa-plus"></i
+              ></span>
+            </div>
+            <div class="w-100 mt-3 bg-secondary d-flex align-items-center p-2">
+              <span class="ms-3 song-number text-muted">03</span>
+              <img class="ms-3 rounded shadow song-img" src="img/girl.jpg" />
+              <p class="mb-0 ms-3 track-text song-text">
+                New Skin
+                <span class="text-muted d-block">Pep Brand</span>
+              </p>
+              <p class="flex-grow text-muted w-100 text-center"></p>
+              <span class="icon text-center"
+                ><i class="fa-regular fa-heart"></i
+              ></span>
+              <span class="icon text-center"
+                ><i class="fa-solid fa-plus"></i
+              ></span>
+            </div>
+            <div class="w-100 mt-3 bg-secondary d-flex align-items-center p-2">
+              <span class="ms-3 song-number text-muted">04</span>
+              <img class="ms-3 rounded shadow song-img" src="img/girl3.jpg" />
+              <p class="mb-0 ms-3 track-text song-text">
+                Imagine Dragons
+                <span class="text-muted d-block">Pep Brand</span>
+              </p>
+              <p class="flex-grow text-muted w-100 text-center"></p>
+              <span class="icon text-center"
+                ><i class="fa-regular fa-heart"></i
+              ></span>
+              <span class="icon text-center"
+                ><i class="fa-solid fa-plus"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-3">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title fw-bold">Similar Artists</h5>
+            <p class="text-muted track-text">View All</p>
+          </div>
+          <div class="row mt-3">
+            <div class="col-3">
+              <img class="w-100 rounded" src="img/girl.jpg" alt="" />
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center">
+              <p class="mb-0 track-text">
+                Imagine Dragons
+                <span class="text-muted d-block">Pep Brand</span>
+              </p>
+            </div>
+            <div class="col-2 h-100 d-flex align-items-end flex-column">
+              <i class="fas fa-ellipsis-h d-block"></i>
+              <span class="text-muted track-text d-block">4:44</span>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-3">
+              <img class="w-100 rounded" src="img/girl.jpg" alt="" />
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center">
+              <p class="mb-0 track-text">
+                Imagine Dragons
+                <span class="text-muted d-block">Pep Brand</span>
+              </p>
+            </div>
+            <div class="col-2 h-100 d-flex align-items-end flex-column">
+              <i class="fas fa-ellipsis-h d-block"></i>
+              <span class="text-muted track-text d-block">4:44</span>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-3">
+              <img class="w-100 rounded" src="img/girl.jpg" alt="" />
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center">
+              <p class="mb-0 track-text">
+                Imagine Dragons
+                <span class="text-muted d-block">Pep Brand</span>
+              </p>
+            </div>
+            <div class="col-2 h-100 d-flex align-items-end flex-column">
+              <i class="fas fa-ellipsis-h d-block"></i>
+              <span class="text-muted track-text d-block">4:44</span>
+            </div>
+          </div>
+          <div class="d-flex mt-5 justify-content-between">
+            <h5 class="card-title fw-bold">Recented Played</h5>
+            <p class="text-muted track-text">View All</p>
+          </div>
+          <div class="row mt-3">
+            <div
+              class="col-1 text-muted d-flex flex-column justify-content-center"
+            >
+              01
+            </div>
+            <div class="col-3">
+              <img class="w-100 rounded" src="img/girl3.jpg" alt="" />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center">
+              <p class="mb-0 track-text">
+                Mirage
+                <span class="text-muted d-block">Else</span>
+              </p>
+            </div>
+            <div class="col-1 d-flex flex-column justify-content-center">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div
+              class="col-1 text-primary d-flex flex-column justify-content-center"
+            >
+              <i class="fa-solid fa-play text-primary"></i>
+            </div>
+            <div class="col-3 rounded">
+              <img class="w-100 rounded" src="img/girl2.jpg" alt="" />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center">
+              <p class="mb-0 track-text">
+                Worry Bout Us
+                <span class="text-muted d-block">Rousie Lowe</span>
+              </p>
+            </div>
+            <div class="col-1 d-flex flex-column justify-content-center">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div
+              class="col-1 text-muted d-flex flex-column justify-content-center"
+            >
+              03
+            </div>
+            <div class="col-3 rounded">
+              <img class="w-100 rounded" src="img/girl3.jpg" alt="" />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center">
+              <p class="mb-0 track-text">
+                Worry Bout Us
+                <span class="text-muted d-block">Rousie Lowe</span>
+              </p>
+            </div>
+            <div class="col-1 d-flex flex-column justify-content-center">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div
+              class="col-1 text-muted d-flex flex-column justify-content-center"
+            >
+              04
+            </div>
+            <div class="col-3 rounded">
+              <img class="w-100 rounded" src="img/girl.jpg" alt="" />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center">
+              <p class="mb-0 track-text">
+                Worry Bout Us
+                <span class="text-muted d-block">Rousie Lowe</span>
+              </p>
+            </div>
+            <div class="col-1 d-flex flex-column justify-content-center">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+  </body>
+</html>

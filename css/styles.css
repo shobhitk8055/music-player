@@ -1,0 +1,111 @@
+:root {
+    --primary: #0c1027;
+    --secondary: #12193e;
+}
+
+.bg-primary{
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary{
+    background-color: var(--secondary) !important;
+}
+
+body, span, a, p{
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.studio{
+    margin-top: -7px;
+    font-weight: 700;
+}
+
+.w-35{
+    width: 35% !important;
+}
+
+.color-btn{
+    background: linear-gradient(90deg, rgb(61, 38, 178) 0%, 9.28571%, rgb(83, 43, 185) 18.5714%, 59.2857%, rgb(181, 68, 218) 100%);
+}
+
+.track-text{
+    font-size: 13px;
+}
+.song-img{
+    width: 65px;
+}
+.song-text{
+    width: fit-content;
+}
+.icon{
+    width: 75px;
+}
+.song-text{
+    width: 250px;
+}
+.song-number{
+    display: inline-block;
+    width: 10px;
+}
+.music-bar{
+    background-color: #282828;
+    z-index: 1;
+}
+.volume-adjustor {
+    display: inline-block;
+    width: 95px;
+    background: linear-gradient(
+        to right,
+        #4e9d26 0%,
+        #4e9d26 50%,
+        white 50%,
+        white 100%
+    );
+    background-color: #4e9d26;
+    height: 5px;
+    margin-left: 12px;
+    border-radius: 20px;
+    position: relative;
+}
+.volume-button {
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    left: 44%;
+}
+.play-icons i {
+    font-size: 14px;
+    padding: 0px 23px;
+}
+i.pause-icon { 
+    font-size: 27px;
+}
+
+.song-adjustor {
+    display: inline-block;
+    width: 360px;
+    background: linear-gradient( to right, #4e9d26 0%, #4e9d26 50%, #757575 50%, #757575 100% );
+    background-color: #4e9d26;
+    height: 5px;
+    margin-left: 12px;
+    border-radius: 20px;
+    position: relative;
+}
+.song-button{
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    left: 46%;
+}
+
+.position-music{
+    position: fixed !important;
+    top: 88vh;
+}
+
+@media screen and (max-width: 769px) {
+    .play-all-button{
+        width: fit-content !important;
+    }
+}
