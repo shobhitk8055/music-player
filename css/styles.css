@@ -1,6 +1,27 @@
 :root {
-    --primary: #0c1027;
-    --secondary: #12193e;
+
+    /* Starter theme */
+    --blue-primary: #0c1027;
+    --blue-secondary: #12193e;
+    --blue-muted: #757575;
+
+    /* Red Theme */
+    --red-primary: #8A1721;
+    --red-secondary: #B31E2B;
+    --red-muted: #e6d2d2;
+
+    /* Green Theme */
+    --green-primary: #285236;
+    --green-secondary: #62805C;
+    --green-muted: #e6d2d2;
+
+    --primary: var(--blue-primary);
+    --secondary: var(--blue-secondary);
+    --muted: var(--blue-muted);
+}
+
+.text-muted{
+    color: var(--muted) !important;
 }
 
 .bg-primary{
@@ -108,4 +129,37 @@ i.pause-icon {
     .play-all-button{
         width: fit-content !important;
     }
+}
+
+.color-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    margin-left: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-box i{
+    display: none;
+}
+.color-box.active i{
+    display: inline;
+}
+
+.red{
+    background-color: var(--red-secondary);
+}
+.green{
+    background-color: var(--green-secondary);
+}
+.blue{
+    background-color: var(--blue-secondary);
+}
+
+.top-40{
+    top: 40%;
+    z-index: 2;
 }
